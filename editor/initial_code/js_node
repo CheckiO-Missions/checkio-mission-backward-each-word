@@ -1,19 +1,23 @@
 "use strict";
 
-function sumTwo(a, b) {
-    // sums two passed arguments
-
+function backwardStringByWord(a) {
     // your code here
-    return 0;
+    return undefined;
 }
 
 var assert = require('assert');
+
 if (!global.is_checking) {
     console.log('Example:');
-    console.log(sumTwo(3, 2));
+    console.log(backwardStringByWord(''));
 
-    // These "asserts" are used for self-checking and not for an auto-testing
-    assert.equal(sumTwo(3, 2), 5);
-    assert.equal(sumTwo(5, 7), 12);
+    // These "asserts" are used for self-checking
+    assert.equal(backwardStringByWord(''), '');
+    assert.equal(backwardStringByWord('world'), 'dlrow');
+    assert.equal(backwardStringByWord('hello world'), 'olleh dlrow');
+    assert.equal(backwardStringByWord('hello   world'), 'olleh   dlrow');
+    assert.equal(backwardStringByWord('welcome to a game'), 'emoclew ot a emag');
+
     console.log("Coding complete? Click 'Check' to earn cool rewards!");
 }
+    
