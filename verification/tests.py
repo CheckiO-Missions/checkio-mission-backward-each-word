@@ -35,6 +35,11 @@ TESTS = {
         {
             "input": ['ha ha ha   this is cool'],
             "answer": 'ah ah ah   siht si looc',
-        }
+        },
+        {
+            "input": ['olleH Hello'],
+            "answer": 'Hello olleH',
+            "explanation": 'be careful with text.replace()',
+        },
     ]
 }
