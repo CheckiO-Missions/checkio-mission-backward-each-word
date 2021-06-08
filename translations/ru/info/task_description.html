@@ -1,0 +1,44 @@
+<!-- Describe task in general -->
+
+<p>
+    Требуется обратить порядок букв в&nbsp;каждом слове предоставленной строки, так чтобы слова остались на&nbsp;своих местах.
+</p>
+
+<!-- Explain input and output values -->
+<p>
+    <strong>Входные данные: </strong> строка.
+</p>
+
+<p>
+    <strong>Выходные данные: </strong> строка. 
+</p>
+
+
+<!-- Give some usage examples -->
+<div class="for_info_only">
+    <p>
+        <strong>Примеры:</strong>
+    </p>
+
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">backwardStringByWord('') == ''
+backwardStringByWord('world') == 'dlrow'
+backwardStringByWord('hello world') == 'olleh dlrow'
+backwardStringByWord('hello   world') == 'olleh   dlrow'
+</pre>
+{% else %}
+<pre class="brush: python">backward_string_by_word('') == ''
+backward_string_by_word('world') == 'dlrow'
+backward_string_by_word('hello world') == 'olleh dlrow'
+backward_string_by_word('hello   world') == 'olleh   dlrow'
+</pre>
+{% endif %}
+</div>
+
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+    <strong>Предусловие:</strong>
+    <i>Строка состоит только из&nbsp;символов алфавита и&nbsp;пробелов.</i>
+</p>
