@@ -5,7 +5,7 @@
     </div>
     <div class="answer">
         Well, let start with the main idea of this mission. You need to walk through the given string, take each word and reverse it.
-         For example, you can use "for loop" or list comprehensions (which be more shortly and elegant solution).
+         For example, you can use "for" loop or list comprehensions (which be more shortly and elegant solution).
     </div>
 </div>
 <div class="question-answer">
@@ -13,11 +13,11 @@
         So, how do I reverse the word?
     </div>
     <div class="answer">
-        For example, you have a word "honey", and you need to reverse it. Ofcourse you can use instruction <a target="_blank" href="https://docs.python.org/3.10/library/functions.html?highlight=reversed#reversed">"reversed"</a>.
+        For example, you have a word "honey", and you need to reverse it. Of course, you can use instruction <a target="_blank" href="https://docs.python.org/3.10/library/functions.html?highlight=reversed#reversed">"reversed"</a>.
          But here is more short and simple expression:
         <pre class="brush: python">
-def a = "honey"
-    a[::-1]  #>> 'yenoh'
+a = "honey"
+a[::-1]  #>> 'yenoh'
         </pre>
     </div>
 </div>
@@ -26,12 +26,11 @@ def a = "honey"
         Wow, okay! Now I need help with "for loop" or list comprehensions.
     </div>
     <div class="answer">
-        List comprehensions it is easy! So, in case when we need to generate a new list
-         from string "Bears loves honey", we can use next expression:
+        List comprehensions is easy! So, in case when we need to generate a new list
+         from string "Bear loves honey", we can use next expression:
         <pre class="brush: python">
-a = "Bears loves honey"
-b = [i for i in "Bears loves honey"]  # it is a list comprehensions
-# >> ['B', 'e', 'a', 'r', 's', ' ', 'l', 'o', 'v', 'e', 's', ' ', 'h', 'o', 'n', 'e', 'y']
+b = [i for i in "Bear loves honey"]  # it is a list comprehensions
+# >> ['B', 'e', 'a', 'r', ' ', 'l', 'o', 'v', 'e', 's', ' ', 'h', 'o', 'n', 'e', 'y']
         </pre>
     </div>
 </div>
@@ -43,17 +42,17 @@ b = [i for i in "Bears loves honey"]  # it is a list comprehensions
         Yes, you are absolutely right! In this case use <a target="_blank" href="https://docs.python.org/3.10/library/stdtypes.html?highlight=str%20split">"str.split()" method</a>.
          It will help you to split given string in to list of words:
         <pre class="brush: python">
-a = "Bears loves honey"
+a = "Bear loves honey"
 c = a.split()
-# >> ['Bears', 'loves', 'honey']
+# >> ['Bear', 'loves', 'honey']
         </pre>
         And in other case, you can use "' '.join()" to convert this list into string back.
         <pre class="brush: python">
-a = "Bears loves honey"
+a = "Bear loves honey"
 c = a.split()
-# >> ['Bears', 'loves', 'honey']
+# >> ['Bear', 'loves', 'honey']
 d = " ".join(c)
-# >> 'Bears loves honey'
+# >> 'Bear loves honey'
         </pre>
     </div>
 </div>
