@@ -1,0 +1,73 @@
+<body data-author="Doppelok">
+<div class="question-answer">
+    <div class="question">
+        Я не знаю, як розпочати вирішення цієї місії
+    </div>
+    <div class="answer">
+        Що ж, почнемо з головної ідеї цієї місії. Тобі потрібно пройти по заданому рядку, взяти кожне слово і перевернути його.
+         Наприклад, ти можеш використовувати "цикл for" або генератор списків (що є більш коротким і елегантним рішенням).
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Отже, як мені перевернути слово?
+    </div>
+    <div class="answer">
+        Наприклад, у тебе є слово "honey", і тобі потрібно його перевернути. Звичайно, ти можеш скористатися інструкцією <a target="_blank" href="https://docs.python.org/3.10/library/functions.html?highlight=reversed#reversed">"reversed"</a>.
+         Але ось більш короткий і простий спосіб:
+        <pre class="brush: python">
+a = "honey"
+a[::-1]  #>> 'yenoh'
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Вау, добре! Тепер мені потрібна допомога з циклом "for" або генератором списків.
+    </div>
+    <div class="answer">
+        Генератор списків це легко! Отже, у випадку, коли нам потрібно створити новий список
+          із рядка "Bear loves honey", ми можемо використати наступний вираз:
+        <pre class="brush: python">
+b = [i for i in "Bear loves honey"]   # це генератор списків
+# >> ['B', 'e', 'a', 'r', ' ', 'l', 'o', 'v', 'e', 's', ' ', 'h', 'o', 'n', 'e', 'y']
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Але мені потрібно ціле слово, а не букви.
+    </div>
+    <div class="answer">
+        Так, ти абсолютно правий! У цьому випадку використовуй <a target="_blank" href="https://docs.python.org/3.10/library/stdtypes.html?highlight=str%20split">метод "str.split()"</a>.
+         Це допоможе тобі розділити заданий рядок на список слів:
+        <pre class="brush: python">
+a = "Bear loves honey"
+c = a.split()
+# >> ['Bear', 'loves', 'honey']
+        </pre>
+        А в іншому випадку ти можеш використовувати "' '.join()", щоб перетворити цей список на рядок назад.
+        <pre class="brush: python">
+a = "Bear loves honey"
+c = a.split()
+# >> ['Bear', 'loves', 'honey']
+d = " ".join(c)
+# >> 'Bear loves honey'
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Так, я маю усі елементи для успішного вирішення місії... Але я щось не можу закінчити її...
+    </div>
+    <div class="answer">
+        Твій остаточний код виглядатиме приблизно так:
+        <pre class="brush: python">
+def backward_string_by_word(text: str) -> str:
+    return ' '.join([x[::-1] for x in text.split(' ')])
+        </pre>
+    </div>
+</div>
+
+
+</body>

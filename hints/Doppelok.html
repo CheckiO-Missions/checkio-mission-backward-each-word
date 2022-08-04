@@ -1,0 +1,73 @@
+<body data-author="Doppelok">
+<div class="question-answer">
+    <div class="question">
+        I have no idea how to start solving this mission
+    </div>
+    <div class="answer">
+        Well, let start with the main idea of this mission. You need to walk through the given string, take each word and reverse it.
+         For example, you can use "for" loop or list comprehensions (which be more shortly and elegant solution).
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        So, how do I reverse the word?
+    </div>
+    <div class="answer">
+        For example, you have a word "honey", and you need to reverse it. Of course, you can use instruction <a target="_blank" href="https://docs.python.org/3.10/library/functions.html?highlight=reversed#reversed">"reversed"</a>.
+         But here is more short and simple expression:
+        <pre class="brush: python">
+a = "honey"
+a[::-1]  #>> 'yenoh'
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Wow, okay! Now I need help with "for loop" or list comprehensions.
+    </div>
+    <div class="answer">
+        List comprehensions is easy! So, in case when we need to generate a new list
+         from string "Bear loves honey", we can use next expression:
+        <pre class="brush: python">
+b = [i for i in "Bear loves honey"]  # it is a list comprehensions
+# >> ['B', 'e', 'a', 'r', ' ', 'l', 'o', 'v', 'e', 's', ' ', 'h', 'o', 'n', 'e', 'y']
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        But I need a whole word, not letters.
+    </div>
+    <div class="answer">
+        Yes, you are absolutely right! In this case use <a target="_blank" href="https://docs.python.org/3.10/library/stdtypes.html?highlight=str%20split">"str.split()" method</a>.
+         It will help you to split given string in to list of words:
+        <pre class="brush: python">
+a = "Bear loves honey"
+c = a.split()
+# >> ['Bear', 'loves', 'honey']
+        </pre>
+        And in other case, you can use "' '.join()" to convert this list into string back.
+        <pre class="brush: python">
+a = "Bear loves honey"
+c = a.split()
+# >> ['Bear', 'loves', 'honey']
+d = " ".join(c)
+# >> 'Bear loves honey'
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Okay, I have all elements to finish this mission... But I'm missing something...
+    </div>
+    <div class="answer">
+        Your final code will be look something like this:
+        <pre class="brush: python">
+def backward_string_by_word(text: str) -> str:
+    return ' '.join([x[::-1] for x in text.split(' ')])
+        </pre>
+    </div>
+</div>
+
+
+</body>
