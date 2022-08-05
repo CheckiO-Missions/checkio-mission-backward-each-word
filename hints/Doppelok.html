@@ -17,7 +17,8 @@
         Let me show you how the "for" loop works. For example, we have the string "honey" and we really want it
          go through the "for" loop and try to output each letter. So the code will look like this:
         <pre class="brush: python">
-for i in "honey":  # This is the beginning of a "for" loop, where the "i" is the variable to which each letter is assigned one step at a time
+for i in "honey":  # This is the beginning of a "for" loop, where the "i"
+            # is the variable to which each letter is assigned one step at a time
     print(i)  # Here we will output the variable "і",
 >> h  # We will get this in the first step
 >> o  # We will get this in the second step
@@ -39,7 +40,8 @@ Wow, good! Now please explain to me what is a list comprehensions?
         <pre class="brush: python">
 a = "honey"
 [i*2 for i in a]  # Here we take each letter and double it by multiplying by 2
->> ['hh', 'oo', 'nn', 'ee', 'yy']  # As you can see, it received a list in response, but all letters became double
+>> ['hh', 'oo', 'nn', 'ee', 'yy']  # As you can see, it received a list in response
+# but all letters became double
         </pre>
         Don't worry, if you still need to get a string, use the string method <a target="_blank" href="https://docs.python.org/3.10/library/stdtypes.html?highlight=str">"''.join()"</a>.
         <pre class="brush: python">
@@ -48,7 +50,8 @@ b = [i*2 for i in a]
 >> ['hh', 'oo', 'nn', 'ee', 'yy']
 ''.join(b)  # In parentheses, we pass the object that we want to "fold" back into a string
 >> 'hhoonneeyy'
-' '.join(b)  # And if we put a space in '', then all letters will be combined into a string through spaces. Read in detail at the link above.
+' '.join(b)  # And if we put a space in '', then all letters will be combined into a string
+            # through spaces. Read in detail at the link above.
 >> 'hh oo nn ee yy'
         </pre>
     </div>
@@ -65,7 +68,8 @@ d = "Bear loves honey"
 c = d.split()
 # >> ['Bear', 'loves', 'honey']  # But as you can see, the spaces have disappeared
 c = d.split(' ')  # We pass a space in the argument
->> ['Bear', 'loves', ' ', 'honey']  # Everything is in place. For a detailed explanation, read the link above.
+>> ['Bear', 'loves', ' ', 'honey']  # Everything is in place
+            # For a detailed explanation, read the link above.
         </pre>
     </div>
 </div>
