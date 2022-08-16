@@ -19,13 +19,15 @@
 for i in "honey":  # Це початок циклу "for", де "і" це змінна
                    #якій присвоюється кожна буква покроково
     print(i)  # Тут ми виведемо змінну "і",
->> h  # Це ми отримаємо на першому кроці
->> o  # Це ми отримаємо на другому кроці
->> n  # Це ми отримаємо на третьому кроці і так до кінця рядка
->> e
->> y
+# output:
+h
+o
+n
+e
+y
         </pre>
-        Тут як бачиш нічого складного.
+        Тут як бачиш нічого складного. Ми отримаємо "h" на першому кроці, "o" на другому,
+         «n» на третьому місці і так далі до кінця рядка.
     </div>
 </div>
 <div class="question-answer">
@@ -39,19 +41,22 @@ for i in "honey":  # Це початок циклу "for", де "і" це змі
         <pre class="brush: python">
 a = "honey"
 [i*2 for i in a]  # Тут ми беремо кожну букву і подвоюємо її за допомогою множення на 2
->> ['hh', 'oo', 'nn', 'ee', 'yy']  # Як бачиш, у відповідь отримали список
-# але всі букви стали подвійними
+# output:
+['hh', 'oo', 'nn', 'ee', 'yy']
         </pre>
-        Не переживай, якщо тобі потрібно все ж таки отримати рядок, то використай рядковий метод <a target="_blank" href="https://docs.python.org/3.10/library/stdtypes.html?highlight=str">' '.join()</a>.
+        Як бачиш, у відповідь отримали список, але всі букви стали подвійними.
+        Не переживай, якщо тобі потрібно все ж таки отримати рядок, то використай рядковий метод
+        <a target="_blank" href="https://docs.python.org/3.10/library/stdtypes.html?highlight=str">' '.join()</a>.
         <pre class="brush: python">
-a = 'honey'
-b = [i*2 for i in a]
->> ['hh', 'oo', 'nn', 'ee', 'yy']
 ''.join(b)  # В дужки передаємо об'єкт, який хочемо "скласти" назад у рядок
->> 'hhoonneeyy'
+# output:
+'hhoonneeyy'
+
+# або
 ' '.join(b)  # А якщо ми поставемо пробіл спочатку, то всі букви поєднає у рядок
             # через пробіли. Детально читай за посиланням вище.
->> 'hh oo nn ee yy'
+# output:
+'hh oo nn ee yy'
         </pre>
     </div>
 </div>
@@ -61,15 +66,20 @@ b = [i*2 for i in a]
         Як слова на букви розкласти мені ясно. Але як мені розкласти речення на слова?
     </div>
     <div class="answer">
-        Для такого випадку використовуй метод <a target="_blank" href="https://docs.python.org/3.10/library/stdtypes.html?highlight=str%20split">"str.split()"</a>.
+        Для такого випадку використовуй метод
+        <a target="_blank" href="https://docs.python.org/3.10/library/stdtypes.html?highlight=str%20split">"str.split()"</a>.
          Це допоможе тобі розділити заданий рядок на список слів:
         <pre class="brush: python">
 d = "Bear loves  honey"  # Після слова loves два пробіли
-c = d.split()
->> ['Bear', 'loves', 'honey']  # Але як бачиш пробіли зникли
-c = d.split(' ')  # Передамо в аргумент пробіл
->> ['Bear', 'loves', ' ', 'honey']  # Все на місці.
-# Для детального пояснення почитай за посиланням вище.
+c = d.split()  # Але як бачиш пробіли зникли
+# output:
+['Bear', 'loves', 'honey']
+
+# або
+c = d.split(' ')  # Передамо в аргумент пробіл. Все на місці.
+# output:
+['Bear', 'loves', ' ', 'honey']
+
         </pre>
     </div>
 </div>
@@ -82,7 +92,9 @@ c = d.split(' ')  # Передамо в аргумент пробіл
          Але ось більш короткий і простий спосіб:
         <pre class="brush: python">
 a = "honey"
-a[::-1]  #>> 'yenoh'
+a[::-1]
+# output:
+'yenoh'
         </pre>
     </div>
 </div>

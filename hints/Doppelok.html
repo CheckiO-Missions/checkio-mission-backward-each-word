@@ -20,13 +20,16 @@
 for i in "honey":  # This is the beginning of a "for" loop, where the "i"
             # is the variable to which each letter is assigned one step at a time
     print(i)  # Here we will output the variable "і",
->> h  # We will get this in the first step
->> o  # We will get this in the second step
->> n  # We will get this in the third step and so on until the end of the string
->> e
->> y
+
+# output:
+h
+o
+n
+e
+y
         </pre>
-        As you can see, there is nothing complicated here.
+        As you can see, there is nothing complicated here. We will get "h" in the first step, "o" at the second,
+        "n" at the third and so on until the end of the string.
     </div>
 </div>
 <div class="question-answer">
@@ -40,20 +43,22 @@ Wow, good! Now please explain to me what is a list comprehensions?
         <pre class="brush: python">
 a = "honey"
 [i*2 for i in a]  # Here we take each letter and double it by multiplying by 2
->> ['hh', 'oo', 'nn', 'ee', 'yy']  # As you can see, it received a list in response
-# but all letters became double
+# output:
+['hh', 'oo', 'nn', 'ee', 'yy']
         </pre>
+        As you can see, it received a list in response, but all letters became double.
         Don't worry, if you still need to get a string, use the string method <a target="_blank" href="https://docs.python.org/3.10/library/stdtypes.html?highlight=str">"''.join()"</a>.
         <pre class="brush: python">
-a = 'honey'
-b = [i*2 for i in a]
->> ['hh', 'oo', 'nn', 'ee', 'yy']
 ''.join(b)  # In parentheses, we pass the object that we want to "fold"
             # back into a string
->> 'hhoonneeyy'
+# output:
+'hhoonneeyy'
+
+# or
 ' '.join(b)  # And if we put a space in '', then all letters will be combined into
              # a string through spaces. Read in detail at the link above.
->> 'hh oo nn ee yy'
+# output:
+'hh oo nn ee yy'
         </pre>
     </div>
 </div>
@@ -65,12 +70,15 @@ b = [i*2 for i in a]
         For such a case, use the method <a target="_blank" href="https://docs.python.org/3.10/library/stdtypes.html?highlight=str%20split">"str.split()"</a>.
          This will help you split the given string into a list of words:
         <pre class="brush: python">
-d = "Bear loves honey"
-c = d.split()
-# >> ['Bear', 'loves', 'honey']  # But as you can see, the spaces have disappeared
-c = d.split(' ')  # We pass a space in the argument
->> ['Bear', 'loves', ' ', 'honey']  # Everything is in place
-            # For a detailed explanation, read the link above.
+d = "Bear loves  honey"  # Two spaces after the word loves
+c = d.split()  # But as you can see, the spaces have disappeared
+# output:
+['Bear', 'loves', 'honey']
+
+# or
+c = d.split(' ') # We pass a space in the argument. Everything is in place.
+# output:
+['Bear', 'loves', ' ', 'honey']
         </pre>
     </div>
 </div>
@@ -84,7 +92,9 @@ c = d.split(' ')  # We pass a space in the argument
          But here is more short and simple expression:
         <pre class="brush: python">
 a = "honey"
-a[::-1]  #>> 'yenoh'
+a[::-1]
+# output:
+'yenoh'
         </pre>
     </div>
 </div>
