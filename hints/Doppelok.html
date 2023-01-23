@@ -1,124 +1,189 @@
 <body data-author="Doppelok">
 <div class="question-answer">
     <div class="question">
-        I have no idea how to start solving this mission
+        <p>
+            I have no idea how to start solving this mission.
+        </p>
     </div>
     <div class="answer">
-        Well, let start with the main idea of this mission. You need to walk through the given string, take each word and reverse it.
-         For example, you can use "for" loop or list comprehensions (which be more shortly and elegant solution).
+        <p>
+            Well, let start with the main idea of this mission. You need to walk through the given string, take each word and reverse it. For example, you can use <b class="code">for</b> loop or list comprehensions (which be more shortly and elegant solution).
+        </p>
     </div>
 </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        How to use a "for" loop?
+        <p>
+            How to use a <b class="code">for</b> loop?
+        </p>
     </div>
     <div class="answer">
-        Let me show you how the "for" loop works. For example, we have the string "honey" and we really want it
-         go through the "for" loop and try to output each letter. So the code will look like this:
+        <p>
+            Let me show you how the <b class="code">for</b> loop works. For example, we have the string <b class="code">"honey"</b> and we really want it go through the <b class="code">for</b> loop and try to output each letter. So the code will look like this:
+        </p>
         <pre class="brush: python">
-for i in "honey":  # This is the beginning of a "for" loop, where the "i"
-            # is the variable to which each letter is assigned one step at a time
-    print(i)  # Here we will output the variable "і",
-
-# output:
+# This is the beginning of a "for" loop, where the "i"
+# is the variable to which each letter is assigned one step at a time           
+for i in "honey":  
+    # Here we will output the variable "і"        
+    print(i)  
+        </pre>
+        <div class="output">
+            <p>Output:</p>
+            <pre>
 h
 o
 n
 e
-y
-        </pre>
-        As you can see, there is nothing complicated here. We will get "h" in the first step, "o" at the second,
-        "n" at the third and so on until the end of the string.
+y        
+            </pre>
+        </div>
+        <p>
+            As you can see, there is nothing complicated here. We will get <b class="code">"h"</b> in the first step, <b class="code">"o"</b> at the second, <b class="code">"n"</b> at the third and so on until the end of the string.
+        </p>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-Wow, good! Now please explain to me what is a list comprehensions?
+        <p>
+            Wow, good! Now please explain to me what is a list comprehensions?
+        </p>
     </div>
     <div class="answer">
-        List comprehensions is easy! A list comprehensions returns a list. With list comprehensions
-          we can write the "for" loop expression in one line! For example, let's make it so that all elements in the line "honey"
-          became double. Here is the code:
+        <p>
+            List comprehension is easy! A list comprehension returns a list. With list comprehensions we can write the <b class="code">for</b> loop expression in one line! For example, let's make it so that all elements in the line <b class="code">"honey"</b> became double. Here is the code:
+        </p>
         <pre class="brush: python">
 a = "honey"
-[i*2 for i in a]  # Here we take each letter and double it by multiplying by 2
-# output:
-['hh', 'oo', 'nn', 'ee', 'yy']
+# Here we take each letter and double it by multiplying by 2
+b = [i*2 for i in a]
+print(b)
         </pre>
-        As you can see, it received a list in response, but all letters became double.
-        Don't worry, if you still need to get a string, use the string method <a target="_blank" href="https://docs.python.org/3.10/library/stdtypes.html?highlight=str">"''.join()"</a>.
+        <div class="output">
+            <p>Output:</p>
+            <pre>
+['hh', 'oo', 'nn', 'ee', 'yy']        
+            </pre>
+        </div>
+        <p>
+            As you can see, it received a list in response, but all letters became double. Don't worry, if you still need to get a string, use the string method <a target="_blank" href="https://docs.python.org/3.10/library/stdtypes.html?highlight=str">"''.join()"</a>.
+        </p>
         <pre class="brush: python">
-''.join(b)  # In parentheses, we pass the object that we want to "fold"
-            # back into a string
-# output:
-'hhoonneeyy'
-
-# or
-' '.join(b)  # And if we put a space in '', then all letters will be combined into
-             # a string through spaces. Read in detail at the link above.
-# output:
-'hh oo nn ee yy'
+# In parentheses, we pass the object that we want to "fold"
+# back into a string            
+print(''.join(b))
         </pre>
+        <div class="output">
+            <p>Output:</p>
+            <pre>
+'hhoonneeyy'        
+            </pre>
+        </div>     
+        <p>
+            Or
+        </p>
+        <pre class="brush: python">
+# And if we put a space in '', then all letters will be combined into
+# a string through spaces. Read in detail at the link above.
+print(' '.join(b))        
+        </pre>
+        <div class="output">
+            <p>Output:</p>
+            <pre>
+'hh oo nn ee yy'        
+            </pre>
+        </div>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        How to break words into letters is clear to me. But how do I break a sentence into words?
+        <p>
+            How to break words into letters is clear to me. But how do I break a sentence into words?
+        </p>
     </div>
     <div class="answer">
-        For such a case, use the method <a target="_blank" href="https://docs.python.org/3.10/library/stdtypes.html?highlight=str%20split">"str.split()"</a>.
-         This will help you split the given string into a list of words:
+        <p>
+            For such a case, use a method <a target="_blank" href="https://docs.python.org/3.10/library/stdtypes.html?highlight=str%20split">str.split()</a>. This will help you to split the given string into a list of words:
+        </p>
         <pre class="brush: python">
-d = "Bear loves  honey"  # Two spaces after the word loves
-c = d.split()  # But as you can see, the spaces have disappeared
-# output:
-['Bear', 'loves', 'honey']
-
-# or
-c = d.split(' ') # We pass a space in the argument. Everything is in place.
-# output:
-['Bear', 'loves', ' ', 'honey']
+# Two spaces after the word loves            
+d = "Bear loves  honey"
+c = d.split()
+# But as you can see, the spaces have disappeared
+print(c)
         </pre>
+        <div class="output">
+            <p>Output:</p>
+            <pre>
+['Bear', 'loves', 'honey']        
+            </pre>
+        </div>
+        <p>Or</p>
+        <pre class="brush: python">
+# We pass a space in the argument. Everything is in place.
+c = d.split(' ')
+print(c)     
+        </pre>
+        <div class="output">
+            <p>Output:</p>
+            <pre>
+['Bear', 'loves', ' ', 'honey']        
+            </pre>
+        </div>
     </div>
 </div>
-
 <div class="question-answer">
     <div class="question">
-        So, how do I reverse the word?
+        <p>
+            So, how do I reverse the word?
+        </p>
     </div>
     <div class="answer">
-        For example, you have a word "honey", and you need to reverse it. Of course, you can use instruction <a target="_blank" href="https://docs.python.org/3.10/library/functions.html?highlight=reversed#reversed">"reversed"</a>.
-         But here is more short and simple expression:
+        <p>
+            For example, you have a word <b class="code">"honey"</b>, and you need to reverse it. Of course, you can use <a target="_blank" href="https://docs.python.org/3.10/library/functions.html?highlight=reversed#reversed">reversed</a> method. But here is more short and simple expression:
+        </p>
         <pre class="brush: python">
 a = "honey"
-a[::-1]
-# output:
-'yenoh'
+print(a[::-1])
         </pre>
+        <div class="output">
+            <p>Output:</p>
+            <pre>
+'yenoh'        
+            </pre>
+        </div>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        Okay, I have all elements to finish this mission... But I'm missing something...
+        <p>
+            Okay, I have all elements to finish this mission... But I'm missing something...
+        </p>
     </div>
     <div class="answer">
-        Your final code will look something like this. Here we will also need the method <a target="_blank" href="https://docs.python.org/3.10/library/stdtypes.html?highlight=str%20split"> ".append()"</a>.
+        <p>
+            Your final code will look something like this. Here we will also need the method <a target="_blank" href="https://docs.python.org/3.10/library/stdtypes.html?highlight=str%20split">.append()</a>.
+        </p>
         <pre class="brush: python">
 def backward_string_by_word(text: str) -> str:
-    new_text = text.split(' ')  # Divide into a list
+    # Divide into a list
+    new_text = text.split(' ')  
     result = []
     for i in new_text:
-        result .append(i[::-1])  # Turn it over and add it to the list
-    return ' '.join(result)  # Combine into a line
+        # Turn it over and add it to the list
+        result .append(i[::-1])
+    # Combine into a line     
+    return ' '.join(result)  
         </pre>
-        But this code can be written in a handy list generator. Look:
+        <p>
+            But this code can be written in a handy list generator. Look:
+        </p>
         <pre class="brush: python">
 def backward_string_by_word(text: str) -> str:
-    return ' '.join([x[::-1] for x in text.split(' ')])
+
+    return ' '.join(x[::-1] for x in text.split(' '))
         </pre>
     </div>
 </div>
-
-
 </body>

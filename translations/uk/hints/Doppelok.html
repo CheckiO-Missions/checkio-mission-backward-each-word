@@ -1,124 +1,187 @@
 <body data-author="Doppelok">
 <div class="question-answer">
     <div class="question">
-        Я не знаю, як розпочати вирішення цієї місії
+        <p>
+            Я не знаю, як розпочати вирішення цієї місії.
+        </p>
     </div>
     <div class="answer">
-        Що ж, почнемо з головної ідеї цієї місії. Тобі потрібно пройти по заданому рядку, взяти кожне слово і перевернути його.
-         Наприклад, ти можеш використовувати цикл "for" або генератор списків (що є більш коротким і елегантним рішенням).
+        <p>
+            Що ж, почнемо з головної ідеї цієї місії. Тобі потрібно пройти по заданому рядку, взяти кожне слово і перевернути його. Наприклад, ти можеш використовувати цикл <b class="code">for</b> або генератор списків (що є більш коротким і елегантним рішенням).
+        </p>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        Як використати цикл "for"?
+        <p>
+            Як використати цикл <b class="code">for</b>?
+        </p>
     </div>
     <div class="answer">
-        Давай я покажу тобі як працює цикл "for". Наприклад, у нас є рядок "honey" і ми дуже хочемо по ньому
-         пройтись циклом "for" і спробувати вивести кожну літеру. Тож код виглядатиме ось так:
+        <p>
+           Давай я покажу тобі як працює цикл <b class="code">for</b>. Наприклад, у нас є рядок 
+           <b class="code">"honey"</b> і ми дуже хочемо по ньому пройтись циклом <b class="code">for</b> і спробувати вивести кожну літеру. Тож код виглядатиме ось так: 
+        </p>
         <pre class="brush: python">
-for i in "honey":  # Це початок циклу "for", де "і" це змінна
-                   #якій присвоюється кожна буква покроково
-    print(i)  # Тут ми виведемо змінну "і",
-# output:
+# Це початок циклу "for", де "і" це змінна       
+# якій присвоюється кожна буква покроково
+for i in "honey":  
+    # Тут ми виведемо змінну "і"               
+    print(i)
+        </pre>
+        <div class="output">
+            <p>Вивід:</p>
+            <pre>
 h
 o
 n
 e
-y
-        </pre>
-        Тут як бачиш нічого складного. Ми отримаємо "h" на першому кроці, "o" на другому,
-         «n» на третьому місці і так далі до кінця рядка.
+y        
+            </pre>
+        </div>
+        <p>
+            Тут як бачиш нічого складного. Ми отримаємо <b class="code">"h"</b> на першому кроці, 
+            <b class="code">"o"</b> на другому, <b class="code">«n»</b> на третьому місці і так далі до кінця рядка.
+        </p>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        Вау, добре! Тепер мені поясни, будь ласка, що таке генератор списків?
+        <p>
+            Вау, добре! Тепер мені поясни, будь ласка, що таке генератор списків?
+        </p>
     </div>
     <div class="answer">
-        Генератор списків це легко! Генератор списку повертає список. За допомогою генераторів списку ми
-         можемо записати вираз циклу "for" в один рядок! Наприклад зробимо так, щоб всі елементи в рядку "honey"
-         стали подвійними. Ось код:
+        <p>
+            Генератор списків це легко! Генератор списку повертає список. За допомогою генераторів списку ми можемо записати вираз циклу <b class="code">for</b> в один рядок! Наприклад зробимо так, щоб всі елементи в рядку <b class="code">"honey"</b> стали подвійними. Ось код:
+        </p>
         <pre class="brush: python">
 a = "honey"
-[i*2 for i in a]  # Тут ми беремо кожну букву і подвоюємо її за допомогою множення на 2
-# output:
-['hh', 'oo', 'nn', 'ee', 'yy']
+# Тут ми беремо кожну букву і подвоюємо її за допомогою множення на 2
+b = [i*2 for i in a]
+print(b)
         </pre>
-        Як бачиш, у відповідь отримали список, але всі букви стали подвійними.
-        Не переживай, якщо тобі потрібно все ж таки отримати рядок, то використай рядковий метод
-        <a target="_blank" href="https://docs.python.org/3.10/library/stdtypes.html?highlight=str">' '.join()</a>.
+        <div class="output">
+            <p>Вивід:</p>
+            <pre>
+['hh', 'oo', 'nn', 'ee', 'yy']        
+            </pre>
+        </div>
+        <p>
+            Як бачиш, у відповідь отримали список, але всі букви стали подвійними. Не переживай, якщо тобі потрібно все ж таки отримати рядок, то використай рядковий метод <a target="_blank" href="https://docs.python.org/3.10/library/stdtypes.html?highlight=str">' '.join()</a>.
+        </p>
         <pre class="brush: python">
-''.join(b)  # В дужки передаємо об'єкт, який хочемо "скласти" назад у рядок
-# output:
-'hhoonneeyy'
-
-# або
-' '.join(b)  # А якщо ми поставемо пробіл спочатку, то всі букви поєднає у рядок
-            # через пробіли. Детально читай за посиланням вище.
-# output:
-'hh oo nn ee yy'
+# В дужки передаємо об'єкт, який хочемо "скласти" назад у рядок            
+print(''.join(b))
         </pre>
-    </div>
-</div>
-
-<div class="question-answer">
-    <div class="question">
-        Як слова на букви розкласти мені ясно. Але як мені розкласти речення на слова?
-    </div>
-    <div class="answer">
-        Для такого випадку використовуй метод
-        <a target="_blank" href="https://docs.python.org/3.10/library/stdtypes.html?highlight=str%20split">"str.split()"</a>.
-         Це допоможе тобі розділити заданий рядок на список слів:
+        <div class="output">
+            <p>Вивід:</p>
+            <pre>
+'hhoonneeyy'        
+            </pre>
+        </div>
+        <p>Або</p>
         <pre class="brush: python">
-d = "Bear loves  honey"  # Після слова loves два пробіли
-c = d.split()  # Але як бачиш пробіли зникли
-# output:
-['Bear', 'loves', 'honey']
-
-# або
-c = d.split(' ')  # Передамо в аргумент пробіл. Все на місці.
-# output:
-['Bear', 'loves', ' ', 'honey']
-
+# А якщо ми поставимо пробіл спочатку, то всі букви поєднає у рядок
+# через пробіли. Детально читай за посиланням вище.      
+print(' '.join(b))  
         </pre>
+        <div class="output">
+            <p>Вивід:</p>
+            <pre>
+'hh oo nn ee yy'        
+            </pre>
+        </div>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        З циклами розібрались. А як мені перевернути слово?
+        <p>
+            Як слова на букви розкласти мені ясно. Але як мені розкласти речення на слова?
+        </p>
     </div>
     <div class="answer">
-        Наприклад, у тебе є слово "honey", і тобі потрібно його перевернути. Звичайно, ти можеш скористатися інструкцією <a target="_blank" href="https://docs.python.org/3.10/library/functions.html?highlight=reversed#reversed">"reversed"</a>.
-         Але ось більш короткий і простий спосіб:
+        <p>
+            Для такого випадку використовуй метод <a target="_blank" href="https://docs.python.org/3.10/library/stdtypes.html?highlight=str%20split">"str.split()"</a>. Це допоможе тобі розділити заданий рядок на список слів:
+        </p>
+        <pre class="brush: python">
+# Після слова loves два пробіли            
+d = "Bear loves  honey"  
+c = d.split()
+print(c)
+# Але як бачиш пробіли зникли
+        </pre>
+        <div class="output">
+            <p>Output:</p>
+            <pre>
+['Bear', 'loves', 'honey']        
+            </pre>
+        </div>
+        <p>Або</p>
+        <pre class="brush: python">
+# Передамо в аргумент пробіл. Все на місці.            
+c = d.split(' ')
+print(c)      
+        </pre>
+        <div class="output">
+            <p>Вивід:</p>
+            <pre>
+['Bear', 'loves', ' ', 'honey']        
+            </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            З циклами розібрались. А як мені перевернути слово?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Наприклад, у тебе є слово <b class="code">"honey"</b> і тобі потрібно його перевернути. Звичайно, ти можеш скористатися методом <a target="_blank" href="https://docs.python.org/3.10/library/functions.html?highlight=reversed#reversed">reversed</a>. Але ось більш короткий і простий спосіб:
+        </p>
         <pre class="brush: python">
 a = "honey"
-a[::-1]
-# output:
-'yenoh'
+print(a[::-1])
         </pre>
+        <div class="output">
+            <p>Вивід:</p>
+            <pre>
+'yenoh'        
+            </pre>
+        </div>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        Так, я маю усі елементи для успішного вирішення місії... Але я щось не можу закінчити її...
+        <p>
+            Так, я маю усі елементи для успішного вирішення місії... Але я щось не можу закінчити її...
+        </p>
     </div>
     <div class="answer">
-        Твій остаточний код виглядатиме приблизно так. Тут нам знадобиться ще метод <a target="_blank" href="https://docs.python.org/3.10/library/stdtypes.html?highlight=str%20split"> ".append()"</a> (почитай про нього).
+        <p>
+            Твій остаточний код виглядатиме приблизно так. Тут нам знадобиться ще метод <a target="_blank" href="https://docs.python.org/3.10/library/stdtypes.html?highlight=str%20split">append()</a> (почитай про нього).
+        </p>
         <pre class="brush: python">
 def backward_string_by_word(text: str) -> str:
-    new_text = text.split(' ')  # Розділяємо на список
+    # Розділяємо на список
+    new_text = text.split(' ')  
     result = []
     for i in new_text:
-        result .append(i[::-1])  # Перевертаємо і додаємо до списку
-    return ' '.join(result)  # Об'єднуємо у рядок
+        # Перевертаємо і додаємо до списку
+        result .append(i[::-1])
+    # Об'єднуємо у рядок    
+    return ' '.join(result)  
         </pre>
-        Але цей код можна записати у зручному генераторі списків. Дивись:
+        <p>
+            Але цей код можна записати у зручному генераторі списків. Дивись:
+        </p>
         <pre class="brush: python">
 def backward_string_by_word(text: str) -> str:
+
     return ' '.join([x[::-1] for x in text.split(' ')])
         </pre>
     </div>
 </div>
-
-
 </body>
