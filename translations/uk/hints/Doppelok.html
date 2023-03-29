@@ -163,6 +163,7 @@ print(a[::-1])
         <p>
             Твій остаточний код виглядатиме приблизно так. Тут нам знадобиться ще метод <a target="_blank" href="https://docs.python.org/3.10/library/stdtypes.html?highlight=str%20split">append()</a> (почитай про нього).
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 def backward_string_by_word(text: str) -> str:
     # Розділяємо на список
@@ -174,14 +175,17 @@ def backward_string_by_word(text: str) -> str:
     # Об'єднуємо у рядок    
     return ' '.join(result)  
         </pre>
+        </div>
         <p>
             Але цей код можна записати у зручному генераторі списків. Дивись:
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 def backward_string_by_word(text: str) -> str:
 
     return ' '.join([x[::-1] for x in text.split(' ')])
         </pre>
+        </div>
     </div>
 </div>
 </body>
