@@ -165,6 +165,7 @@ print(a[::-1])
         <p>
             Your final code will look something like this. Here we will also need the method <a target="_blank" href="https://docs.python.org/3.10/library/stdtypes.html?highlight=str%20split">.append()</a>.
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 def backward_string_by_word(text: str) -> str:
     # Divide into a list
@@ -176,14 +177,17 @@ def backward_string_by_word(text: str) -> str:
     # Combine into a line     
     return ' '.join(result)  
         </pre>
+        </div>
         <p>
             But this code can be written in a handy list generator. Look:
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 def backward_string_by_word(text: str) -> str:
 
     return ' '.join(x[::-1] for x in text.split(' '))
         </pre>
+        </div>
     </div>
 </div>
 </body>
