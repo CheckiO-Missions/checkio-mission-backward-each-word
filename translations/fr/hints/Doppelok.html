@@ -1,0 +1,193 @@
+<body data-author="Doppelok">
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Je n'ai aucune idée de la manière de commencer à résoudre cette mission.
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Commençons par l'idée principale de cette mission. Vous devez parcourir la chaîne donnée, prendre chaque mot et l'inverser. Par exemple, vous pouvez utiliser <b class="code">for</b> loop ou list comprehensions (qui sont des solutions plus courtes et plus élégantes).
+        </p>
+    </div>
+</div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Comment utiliser une boucle <b class="code">for</b>?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Laissez-moi vous montrer comment fonctionne la boucle <b class="code">for</b>. Par exemple, nous avons la chaîne <b class="code">"honey"</b> et nous voulons vraiment qu'elle passe par la boucle <b class="code">for</b> et qu'elle essaie de sortir chaque lettre. Le code ressemblera donc à ceci:
+        </p>
+        <pre class="brush: python">
+# This is the beginning of a "for" loop, where the "i"
+# is the variable to which each letter is assigned one step at a time           
+for i in "honey":  
+    # Here we will output the variable "і"        
+    print(i)  
+        </pre>
+        <div class="output">
+            <p>Sortie:</p>
+            <pre>
+h
+o
+n
+e
+y        
+            </pre>
+        </div>
+        <p>
+            Comme vous pouvez le voir, il n'y a rien de compliqué ici. Nous obtiendrons <b class="code">"h"</b> à la première étape, <b class="code">"o"</b> à la deuxième, <b class="code">"n"</b> à la troisième et ainsi de suite jusqu'à la fin de la chaîne.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Wow, c'est bien! Maintenant, expliquez-moi ce qu'est une liste de compréhension
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            La compréhension de liste, c'est facile! Une compréhension de liste renvoie une liste. Avec les compréhensions de liste, nous pouvons écrire l'expression de la boucle <b class="code">for</b> en une seule ligne! Par exemple, faisons en sorte que tous les éléments de la ligne <b class="code">"honey"</b> deviennent doubles. Voici le code:
+        </p>
+        <pre class="brush: python">
+a = "honey"
+# Here we take each letter and double it by multiplying by 2
+b = [i*2 for i in a]
+print(b)
+        </pre>
+        <div class="output">
+            <p>Sortie:</p>
+            <pre>
+['hh', 'oo', 'nn', 'ee', 'yy']        
+            </pre>
+        </div>
+        <p>
+            Comme vous pouvez le voir, il a reçu une liste en réponse, mais toutes les lettres sont devenues doubles. Ne vous inquiétez pas, si vous avez toujours besoin d'obtenir une chaîne de caractères, utilisez la méthode string <a target="_blank" href="https://docs.python.org/3.10/library/stdtypes.html?highlight=str">"''.join()"</a>.
+        </p>
+        <pre class="brush: python">
+# In parentheses, we pass the object that we want to "fold"
+# back into a string            
+print(''.join(b))
+        </pre>
+        <div class="output">
+            <p>Résultat:</p>
+            <pre>
+'hhoonneeyy'        
+            </pre>
+        </div>     
+        <p>
+            Ou
+        </p>
+        <pre class="brush: python">
+# And if we put a space in '', then all letters will be combined into
+# a string through spaces. Read in detail at the link above.
+print(' '.join(b))        
+        </pre>
+        <div class="output">
+            <p>Sortie:</p>
+            <pre>
+'hh oo nn ee yy'        
+            </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            La manière de décomposer les mots en lettres est claire pour moi. Mais comment décomposer une phrase en mots?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Dans ce cas, utilisez la méthode <a target="_blank" href="https://docs.python.org/3.10/library/stdtypes.html?highlight=str%20split">str.split()</a>. Elle vous aidera à diviser la chaîne donnée en une liste de mots:
+        </p>
+        <pre class="brush: python">
+# Two spaces after the word loves            
+d = "Bear loves  honey"
+c = d.split()
+# But as you can see, the spaces have disappeared
+print(c)
+        </pre>
+        <div class="output">
+            <p>Résultat:</p>
+            <pre>
+['Bear', 'loves', 'honey']        
+            </pre>
+        </div>
+        <p>Ou</p>
+        <pre class="brush: python">
+# We pass a space in the argument. Everything is in place.
+c = d.split(' ')
+print(c)     
+        </pre>
+        <div class="output">
+            <p>Sortie:</p>
+            <pre>
+['Bear', 'loves', ' ', 'honey']        
+            </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Comment inverser le mot?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Par exemple, vous avez un mot <b class="code">"honey"</b>, et vous devez l'inverser. Bien sûr, vous pouvez utiliser la méthode <a target="_blank" href="https://docs.python.org/3.10/library/functions.html?highlight=reversed#reversed">reversed</a>. Mais voici une expression plus courte et plus simple:
+        </p>
+        <pre class="brush: python">
+a = "honey"
+print(a[::-1])
+        </pre>
+        <div class="output">
+            <p>Sortie:</p>
+            <pre>
+'yenoh'        
+            </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Ok, j'ai tous les éléments pour finir cette mission... Mais il me manque quelque chose...
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Votre code final ressemblera à ceci. Ici, nous aurons également besoin de la méthode <a target="_blank" href="https://docs.python.org/3.10/library/stdtypes.html?highlight=str%20split">.append()</a>.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def backward_string_by_word(text: str) -> str:
+    # Divide into a list
+    new_text = text.split(' ')  
+    result = []
+    for i in new_text:
+        # Turn it over and add it to the list
+        result .append(i[::-1])
+    # Combine into a line     
+    return ' '.join(result)  
+        </pre>
+        </div>
+        <p>
+            Mais ce code peut être écrit dans un générateur de liste pratique. Regardez:
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def backward_string_by_word(text: str) -> str:
+
+    return ' '.join(x[::-1] for x in text.split(' '))
+        </pre>
+        </div>
+    </div>
+</div>
+</body>
