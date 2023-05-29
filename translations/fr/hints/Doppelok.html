@@ -23,10 +23,10 @@
             Laissez-moi vous montrer comment fonctionne la boucle <b class="code">for</b>. Par exemple, nous avons la chaîne <b class="code">"honey"</b> et nous voulons vraiment qu'elle passe par la boucle <b class="code">for</b> et qu'elle essaie de sortir chaque lettre. Le code ressemblera donc à ceci:
         </p>
         <pre class="brush: python">
-# This is the beginning of a "for" loop, where the "i"
-# is the variable to which each letter is assigned one step at a time           
+# C'est le début d'une boucle "for", où le "i"
+# est la variable à laquelle chaque lettre est assignée, étape par étape.       
 for i in "honey":  
-    # Here we will output the variable "і"        
+    # Ici, nous sortirons la variable "і"        
     print(i)  
         </pre>
         <div class="output">
@@ -56,7 +56,7 @@ y
         </p>
         <pre class="brush: python">
 a = "honey"
-# Here we take each letter and double it by multiplying by 2
+# Ici, nous prenons chaque lettre et nous la doublons en la multipliant par 2
 b = [i*2 for i in a]
 print(b)
         </pre>
@@ -70,8 +70,8 @@ print(b)
             Comme vous pouvez le voir, il a reçu une liste en réponse, mais toutes les lettres sont devenues doubles. Ne vous inquiétez pas, si vous avez toujours besoin d'obtenir une chaîne de caractères, utilisez la méthode string <a target="_blank" href="https://docs.python.org/3.10/library/stdtypes.html?highlight=str">"''.join()"</a>.
         </p>
         <pre class="brush: python">
-# In parentheses, we pass the object that we want to "fold"
-# back into a string            
+# Entre parenthèses, nous passons l'objet que nous voulons "plier"
+# en une chaîne de caractères      
 print(''.join(b))
         </pre>
         <div class="output">
@@ -84,8 +84,8 @@ print(''.join(b))
             Ou
         </p>
         <pre class="brush: python">
-# And if we put a space in '', then all letters will be combined into
-# a string through spaces. Read in detail at the link above.
+# Et si nous mettons un espace dans '', alors toutes les lettres seront combinées en
+# une chaîne de caractères à travers les espaces. Pour plus de détails, voir le lien ci-dessus
 print(' '.join(b))        
         </pre>
         <div class="output">
@@ -107,10 +107,10 @@ print(' '.join(b))
             Dans ce cas, utilisez la méthode <a target="_blank" href="https://docs.python.org/3.10/library/stdtypes.html?highlight=str%20split">str.split()</a>. Elle vous aidera à diviser la chaîne donnée en une liste de mots:
         </p>
         <pre class="brush: python">
-# Two spaces after the word loves            
+# Deux espaces après le mot "loves".            
 d = "Bear loves  honey"
 c = d.split()
-# But as you can see, the spaces have disappeared
+# Mais comme vous pouvez le constater, les espaces ont disparu
 print(c)
         </pre>
         <div class="output">
@@ -121,7 +121,7 @@ print(c)
         </div>
         <p>Ou</p>
         <pre class="brush: python">
-# We pass a space in the argument. Everything is in place.
+# Nous passons un espace dans l'argument. Tout est en place
 c = d.split(' ')
 print(c)     
         </pre>
@@ -168,13 +168,13 @@ print(a[::-1])
         <div class="spoiler">
         <pre class="brush: python">
 def backward_string_by_word(text: str) -> str:
-    # Divide into a list
+    # Diviser en liste
     new_text = text.split(' ')  
     result = []
     for i in new_text:
-        # Turn it over and add it to the list
+        # Retournez-le et ajoutez-le à la liste
         result .append(i[::-1])
-    # Combine into a line     
+    # Mélanger pour former une ligne     
     return ' '.join(result)  
         </pre>
         </div>
