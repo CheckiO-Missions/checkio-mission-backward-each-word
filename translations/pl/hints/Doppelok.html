@@ -1,0 +1,187 @@
+<body data-author="Doppelok">
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Nie mam pojęcia, jak zacząć rozwiązywać tę misję.
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Cóż, proszę zacząć od głównej idei tej misji. Musi Pan przejść przez podany ciąg znaków, wziąć każde słowo i odwrócić je. Można na przykład użyć pętli <b class="code">for</b> lub list comprehensions (co jest krótszym i bardziej eleganckim rozwiązaniem).
+        </p>
+    </div>
+</div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Jak używać pętli <b class="code">for</b>?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Proszę pozwolić mi pokazać, jak działa pętla <b class="code">for</b>. Na przykład, mamy ciąg <b class="code">"honey"</b> i chcemy, aby przeszedł on przez pętlę <b class="code">for</b> i spróbował wypisać każdą literę. Tak więc kod będzie wyglądał następująco:
+        </p>
+        <pre class="brush: python">
+# This is the beginning of a "for" loop, where the "i"
+# is the variable to which each letter is assigned one step at a time           
+for i in "honey":  
+    # Here we will output the variable "і"        
+    print(i)  
+        </pre>
+        <div class="output">
+            <p>Wyjście:</p>
+            <pre>
+h
+o
+n
+e
+y</pre>
+        </div>
+        <p>
+            Jak widać, nie ma tu nic skomplikowanego. Otrzymamy <b class="code">"h"</b> w pierwszym kroku, <b class="code">"o"</b> w drugim, <b class="code">"n"</b> w trzecim i tak dalej, aż do końca ciągu.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Wow, dobrze! Teraz proszę mi wyjaśnić, co to jest list comprehensions?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Zrozumienie listy jest proste! Zrozumienie listy zwraca listę. Za pomocą list comprehensions możemy napisać wyrażenie pętli <b class="code">for</b> w jednej linii! Na przykład, zróbmy tak, aby wszystkie elementy w wierszu <b class="code">"honey"</b> stały się podwójne. Oto kod:
+        </p>
+        <pre class="brush: python">
+a = "honey"
+# Here we take each letter and double it by multiplying by 2
+b = [i*2 for i in a]
+print(b)
+        </pre>
+        <div class="output">
+            <p>Wyjście:</p>
+            <pre>
+['hh', 'oo', 'nn', 'ee', 'yy']</pre>
+        </div>
+        <p>
+            Jak widać, w odpowiedzi otrzymano listę, ale wszystkie litery stały się podwójne. Proszę się nie martwić, jeśli nadal chcesz uzyskać ciąg znaków, użyj metody string <a target="_blank" href="https://docs.python.org/3.10/library/stdtypes.html?highlight=str">"''.join()"</a>.
+        </p>
+        <pre class="brush: python">
+# In parentheses, we pass the object that we want to "fold"
+# back into a string            
+print(''.join(b))
+        </pre>
+        <div class="output">
+            <p>Wynik:</p>
+            <pre>
+'hhoonneeyy'</pre>
+        </div>     
+        <p>
+            Lub
+        </p>
+        <pre class="brush: python">
+# And if we put a space in '', then all letters will be combined into
+# a string through spaces. Read in detail at the link above.
+print(' '.join(b))        
+        </pre>
+        <div class="output">
+            <p>Wyjście:</p>
+            <pre>
+'hh oo nn ee yy'        
+            </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Jak podzielić słowa na litery jest dla mnie jasne. Ale jak podzielić zdanie na słowa?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            W takim przypadku proszę skorzystać z metody <a target="_blank" href="https://docs.python.org/3.10/library/stdtypes.html?highlight=str%20split">str.split()</a>. Pomoże ona Państwu podzielić podany ciąg znaków na listę słów:
+        </p>
+        <pre class="brush: python">
+# Two spaces after the word loves            
+d = "Bear loves  honey"
+c = d.split()
+# But as you can see, the spaces have disappeared
+print(c)
+        </pre>
+        <div class="output">
+            <p>Output:</p>
+            <pre>
+['Bear', 'loves', 'honey']</pre>
+        </div>
+        <p>Lub</p>
+        <pre class="brush: python">
+# We pass a space in the argument. Everything is in place.
+c = d.split(' ')
+print(c)     
+        </pre>
+        <div class="output">
+            <p>Wyjście:</p>
+            <pre>
+['Bear', 'loves', ' ', 'honey']</pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Jak więc odwrócić to słowo?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Na przykład, mają Państwo słowo <b class="code">"honey"</b> i muszą je Państwo odwrócić. Oczywiście można użyć metody <a target="_blank" href="https://docs.python.org/3.10/library/functions.html?highlight=reversed#reversed">reversed</a>. Ale tutaj jest krótsze i prostsze wyrażenie:
+        </p>
+        <pre class="brush: python">
+a = "honey"
+print(a[::-1])
+        </pre>
+        <div class="output">
+            <p>Wyjście:</p>
+            <pre>
+'yenoh'</pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Ok, mam wszystkie elementy do ukończenia tej misji... Ale czegoś mi brakuje...
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Ostateczny kod będzie wyglądał mniej więcej tak. Tutaj będziemy również potrzebować metody <a target="_blank" href="https://docs.python.org/3.10/library/stdtypes.html?highlight=str%20split">.append()</a>.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def backward_string_by_word(text: str) -> str:
+    # Divide into a list
+    new_text = text.split(' ')  
+    result = []
+    for i in new_text:
+        # Turn it over and add it to the list
+        result .append(i[::-1])
+    # Combine into a line     
+    return ' '.join(result)  
+        </pre>
+        </div>
+        <p>
+            Ale ten kod można napisać w poręcznym generatorze list. Proszę spojrzeć:
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def backward_string_by_word(text: str) -> str:
+
+    return ' '.join(x[::-1] for x in text.split(' '))
+        </pre>
+        </div>
+    </div>
+</div>
+</body>
