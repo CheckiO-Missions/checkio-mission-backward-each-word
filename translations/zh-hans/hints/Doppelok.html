@@ -1,0 +1,186 @@
+<body data-author="Doppelok">
+<div class="question-answer">
+    <div class="question">
+        <p>
+            我不知道如何开始解决这项任务。
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            好吧，让我们从这个任务的主旨开始。您需要浏览给定的字符串，取每个单词并反转它。例如，您可以使用<b class="code">for</b> loop 或 list comprehensions（这是更简便、更优雅的解决方案）。
+        </p>
+    </div>
+</div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            如何使用<b class="code">for</b> 循环？
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            让我向您展示一下<b class="code">for</b> 循环是如何工作的。例如，我们有一个字符串<b class="code">"honey"</b> ，我们希望它通过<b class="code">for</b> 循环并尝试输出每个字母。代码如下
+        </p>
+        <pre class="brush: python">
+# This is the beginning of a "for" loop, where the "i"
+# is the variable to which each letter is assigned one step at a time           
+for i in "honey":  
+    # Here we will output the variable "і"        
+    print(i)  
+        </pre>
+        <div class="output">
+            <p>输出：</p>
+            <pre>
+h
+o
+n
+e
+y</pre>
+        </div>
+        <p>
+            如您所见，这里并不复杂。第一步得到<b class="code">"h"</b> ，第二步得到<b class="code">"o"</b> ，第三步得到<b class="code">"n"</b> ，以此类推直到字符串结束。
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            哇，很好！现在请向我解释一下什么是列表理解？
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            列表理解很简单！列表理解返回一个列表。使用列表理解，我们可以在一行中写出<b class="code">for</b> 循环表达式！例如，让我们使<b class="code">"honey"</b> 行中的所有元素都变成 double。下面是代码
+        </p>
+        <pre class="brush: python">
+a = "honey"
+# Here we take each letter and double it by multiplying by 2
+b = [i*2 for i in a]
+print(b)
+        </pre>
+        <div class="output">
+            <p>输出：</p>
+            <pre>
+['hh', 'oo', 'nn', 'ee', 'yy']</pre>
+        </div>
+        <p>
+            正如你所看到的，它收到了一个列表，但所有字母都变成了双倍。别担心，如果你仍然需要得到一个字符串，使用字符串方法<a target="_blank" href="https://docs.python.org/3.10/library/stdtypes.html?highlight=str">"''.join()"</a> 。
+        </p>
+        <pre class="brush: python">
+# In parentheses, we pass the object that we want to "fold"
+# back into a string            
+print(''.join(b))
+        </pre>
+        <div class="output">
+            <p>输出：</p>
+            <pre>
+'hhoonneeyy'</pre>
+        </div>     
+        <p>
+            或者
+        </p>
+        <pre class="brush: python">
+# And if we put a space in '', then all letters will be combined into
+# a string through spaces. Read in detail at the link above.
+print(' '.join(b))        
+        </pre>
+        <div class="output">
+            <p>输出：或</p>
+            <pre>
+'hh oo nn ee yy'</pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            如何将单词分解成字母我很清楚。但如何将句子分解成单词呢？
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            在这种情况下，请使用<a target="_blank" href="https://docs.python.org/3.10/library/stdtypes.html?highlight=str%20split">str.split()</a> 方法。这将帮助您将给定的字符串拆分成单词列表：
+        </p>
+        <pre class="brush: python">
+# Two spaces after the word loves            
+d = "Bear loves  honey"
+c = d.split()
+# But as you can see, the spaces have disappeared
+print(c)
+        </pre>
+        <div class="output">
+            <p>输出：</p>
+            <pre>
+['Bear', 'loves', 'honey']</pre>
+        </div>
+        <p>或</p>
+        <pre class="brush: python">
+# We pass a space in the argument. Everything is in place.
+c = d.split(' ')
+print(c)     
+        </pre>
+        <div class="output">
+            <p>输出: Or</p>
+            <pre>
+['Bear', 'loves', ' ', 'honey']</pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            那么，如何反转单词呢？
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            例如，您有一个单词<b class="code">"honey"</b> ，您需要将其反转。当然，您可以使用<a target="_blank" href="https://docs.python.org/3.10/library/functions.html?highlight=reversed#reversed">reversed</a> 方法。但这里有更简短的表达方式：
+        </p>
+        <pre class="brush: python">
+a = "honey"
+print(a[::-1])
+        </pre>
+        <div class="output">
+            <p>输出：</p>
+            <pre>
+'yenoh'</pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            好的，我有完成这个任务的所有元素...但我还缺少一些东西...
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            您的最终代码将如下所示。这里我们还需要方法<a target="_blank" href="https://docs.python.org/3.10/library/stdtypes.html?highlight=str%20split">.append()</a>.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def backward_string_by_word(text: str) -> str:
+    # Divide into a list
+    new_text = text.split(' ')  
+    result = []
+    for i in new_text:
+        # Turn it over and add it to the list
+        result .append(i[::-1])
+    # Combine into a line     
+    return ' '.join(result)  
+        </pre>
+        </div>
+        <p>
+            但是这段代码可以写在一个方便的列表生成器中。请看
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def backward_string_by_word(text: str) -> str:
+
+    return ' '.join(x[::-1] for x in text.split(' '))
+        </pre>
+        </div>
+    </div>
+</div>
+</body>
